@@ -1,0 +1,13 @@
+[2024-01-13T21:07:29.664+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.transform_data manual__2024-01-13T21:07:22.378455+00:00 [queued]>
+[2024-01-13T21:07:29.684+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.transform_data manual__2024-01-13T21:07:22.378455+00:00 [queued]>
+[2024-01-13T21:07:29.685+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 2
+[2024-01-13T21:07:29.743+0000] {taskinstance.py:2192} INFO - Executing <Task(PythonOperator): transform_data> on 2024-01-13 21:07:22.378455+00:00
+[2024-01-13T21:07:29.756+0000] {standard_task_runner.py:60} INFO - Started process 4705 to run task
+[2024-01-13T21:07:29.764+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'transform_data', 'manual__2024-01-13T21:07:22.378455+00:00', '--job-id', '31', '--raw', '--subdir', 'DAGS_FOLDER/myfirstday.py', '--cfg-path', '/tmp/tmpc50is35t']
+[2024-01-13T21:07:29.767+0000] {standard_task_runner.py:88} INFO - Job 31: Subtask transform_data
+[2024-01-13T21:07:29.970+0000] {task_command.py:423} INFO - Running <TaskInstance: etl_dag.transform_data manual__2024-01-13T21:07:22.378455+00:00 [running]> on host 004774b68eca
+[2024-01-13T21:07:30.265+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='navanish' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='transform_data' AIRFLOW_CTX_EXECUTION_DATE='2024-01-13T21:07:22.378455+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-13T21:07:22.378455+00:00'
+[2024-01-13T21:07:30.620+0000] {python.py:201} INFO - Done. Returned value was: {'Market Cap': '5,65,463', 'Current Price': '634', 'High / Low': '660', 'Stock P/E': '9.10', 'Book Value': '367', 'Dividend Yield': '1.78', 'ROCE': '5.09', 'ROE': '16.5', 'Face Value': '1.00'}
+[2024-01-13T21:07:30.694+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=etl_dag, task_id=transform_data, execution_date=20240113T210722, start_date=20240113T210729, end_date=20240113T210730
+[2024-01-13T21:07:30.783+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-01-13T21:07:30.829+0000] {taskinstance.py:3281} INFO - 1 downstream tasks scheduled from follow-on schedule check
